@@ -1,0 +1,185 @@
+/* Canlı destek aç/kapat butonu */
+.live-chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.live-chat-toggle:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Canlı destek ana kutu */
+.live-chat-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* Üst başlık alanı */
+.live-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.live-chat-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.live-chat-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.live-chat-header-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.live-chat-header-close:hover {
+  transform: rotate(90deg);
+}
+
+/* Karşılama mesajı */
+.live-chat-welcome {
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Mesajların olduğu alan */
+.live-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.live-chat-message {
+  display: flex;
+  align-items: center;
+}
+
+.live-chat-message.me {
+  justify-content: flex-end;
+}
+
+.live-chat-message-content {
+  background-color: #e4e6eb;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 70%;
+  word-break: break-word;
+}
+
+.live-chat-message.me .live-chat-message-content {
+  background-color: #007bff;
+  color: white;
+}
+
+.live-chat-file-link {
+  color: #007bff;
+  text-decoration: underline;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+/* Mesaj gönderme alanı */
+.live-chat-footer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.live-chat-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.live-chat-file-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.live-chat-file-upload img {
+  width: 18px;
+  height: 18px;
+}
+
+.live-chat-file-upload:hover {
+  background-color: #e4e6eb;
+  transform: scale(1.1);
+}
+
+.live-chat-send-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.live-chat-send-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
