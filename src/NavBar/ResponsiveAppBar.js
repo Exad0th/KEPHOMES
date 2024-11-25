@@ -37,10 +37,12 @@ const pages = [
   { key: "contact", path: "/contact" },
 ];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({changeLanguage }) {
+ 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const { t, i18n } = useTranslation();
+  
 
   const [openDialog, setOpenDialog] = React.useState(false);
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -49,7 +51,7 @@ function ResponsiveAppBar() {
   const handleLanguageChange = (event) => {
     const value = event.target.value;
     setLanguage(value);
-    i18n.changeLanguage(value);
+    changeLanguage(value);
   };
 
   const handleOpenDialog = () => {

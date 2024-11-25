@@ -2,9 +2,9 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 // Çeviri dosyalarını içeri aktarıyoruz
-import en from "./en";
-import tr from "./tr";
-import de from "./de";
+import en from "../i18n/en";
+import tr from "../i18n/tr";
+import de from "../i18n/de";
 
 // i18n yapılandırması
 i18n.use(initReactI18next).init({

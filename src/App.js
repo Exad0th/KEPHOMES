@@ -15,14 +15,14 @@ import LiveChat from "./LiveChat/LiveChat"; // Doğru import
 function App() {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (lang) => {
+  const changeLang = (lang) => {
     i18n.changeLanguage(lang);
   };
 
   return (
     <Router>
       <div>
-        <ResponsiveAppBar changeLanguage={changeLanguage} />
+        <ResponsiveAppBar changeLanguage={changeLang} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
